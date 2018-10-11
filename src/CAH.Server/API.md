@@ -1,26 +1,26 @@
-# Loby
+# Lobby
 
-## Loby: Client API
+## Lobby: Client API
 
-#### ***`loby/login(username, [password])`***
+#### ***`lobby/login(username, [password])`***
 * Success - available deck names, opened game rooms, player's score (only saved if a password is set)
 * Failure: reason (account exists and has a password / wrong password)
 
-#### ***`loby/joinGameRoom(gameRoomId)`***
+#### ***`lobby/joinGameRoom(gameRoomId)`***
 * Success: target game room info
 * Failure: reason (closed / wrong password / room full).
 
-#### ***`loby/createGameRoom(gameRoomInfo)`***
+#### ***`lobby/createGameRoom(gameRoomInfo)`***
 * Returns the ID of the created room
 
 
-## Loby: Server updates
+## Lobby: Server updates
 
-#### ***`loby/gameRoomUpdated`***
-  * ID, new info
-  * If the ID is new, this is a creation update
+#### ***`lobby/gameRoomUpdated`***
+* ID, new info
+* If the ID is new, this is a creation update
 
-#### ***`loby/gameRoomClosed`***
+#### ***`lobby/gameRoomClosed`***
 * ID
 
 
