@@ -3,7 +3,7 @@
 ## Loby: Client API
 
 #### ***`loby/login(username, [password])`***
-* Success - available deck names, opened game rooms
+* Success - available deck names, opened game rooms, player's score (only saved if a password is set)
 * Failure: reason (account exists and has a password / wrong password)
 
 #### ***`loby/joinGameRoom(gameRoomId)`***
@@ -11,7 +11,7 @@
 * Failure: reason (closed / wrong password / room full).
 
 #### ***`loby/createGameRoom(gameRoomInfo)`***
-* Returns the ID, scoreboard
+* Returns the ID of the created room
 
 
 ## Loby: Server updates
