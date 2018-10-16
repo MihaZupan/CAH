@@ -72,7 +72,7 @@ namespace CAH.Server
 
                 default:
                     SendError("Unknown method");
-                    break;
+                    return;
             }
 
             invalidRequest:
