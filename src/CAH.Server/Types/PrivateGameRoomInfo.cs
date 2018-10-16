@@ -7,9 +7,8 @@
 */
 namespace CAH.Server.Types
 {
-    class BlackCard
+    class PrivateGameRoomInfo
     {
-        public string Text;
-        public int Pick;
+
     }
 }

@@ -7,9 +7,13 @@
 */
 namespace CAH.Server.Types
 {
-    class BlackCard
+    class LobbyGameRoomInfo
     {
-        public string Text;
-        public int Pick;
+        public string RoomName;
+        public int RoomID;
+        public int PlayerCount;
+        public int MaxPlayers;
+        public bool RequiresPassword;
+        public bool GameInProgress;
     }
 }

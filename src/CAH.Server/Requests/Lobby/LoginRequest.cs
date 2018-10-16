@@ -5,11 +5,15 @@
     For more information visit:
     https://github.com/MihaZupan/CAH/blob/master/LICENSE
 */
-namespace CAH.Server.Types
+using Newtonsoft.Json;
+
+namespace CAH.Server.Requests.Lobby
 {
-    class BlackCard
+    class LoginRequest : RequestBase
     {
-        public string Text;
-        public int Pick;
+        [JsonProperty(Required = Required.Always)]
+        public string Username;
+
+        public string Password;
     }
 }

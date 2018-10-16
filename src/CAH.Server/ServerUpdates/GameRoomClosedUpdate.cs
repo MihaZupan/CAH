@@ -5,11 +5,17 @@
     For more information visit:
     https://github.com/MihaZupan/CAH/blob/master/LICENSE
 */
-namespace CAH.Server.Types
+namespace CAH.Server.ServerUpdates
 {
-    class BlackCard
+    class GameRoomClosedUpdate : IServerUpdate
     {
-        public string Text;
-        public int Pick;
+        public string Method => Methods.Lobby_GameRoomClosed;
+
+        public int RoomId;
+
+        public GameRoomClosedUpdate(int id)
+        {
+            RoomId = id;
+        }
     }
 }

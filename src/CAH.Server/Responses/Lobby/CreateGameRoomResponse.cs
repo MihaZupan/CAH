@@ -5,11 +5,17 @@
     For more information visit:
     https://github.com/MihaZupan/CAH/blob/master/LICENSE
 */
-namespace CAH.Server.Types
+namespace CAH.Server.Responses.Lobby
 {
-    class BlackCard
+    class CreateGameRoomResponse : IResponse
     {
-        public string Text;
-        public int Pick;
+        public string Method => Methods.Lobby_CreateGameRoom;
+
+        public int GameRoomId;
+
+        public CreateGameRoomResponse(int gameRoomId)
+        {
+            GameRoomId = gameRoomId;
+        }
     }
 }

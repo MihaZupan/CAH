@@ -5,11 +5,16 @@
     For more information visit:
     https://github.com/MihaZupan/CAH/blob/master/LICENSE
 */
-namespace CAH.Server.Types
+namespace CAH.Server.Responses
 {
-    class BlackCard
+    class ErrorResponse : IResponse
     {
-        public string Text;
-        public int Pick;
+        public string Method => Methods.Error;
+        public string Message;
+
+        public ErrorResponse(string message)
+        {
+            Message = message;
+        }
     }
 }

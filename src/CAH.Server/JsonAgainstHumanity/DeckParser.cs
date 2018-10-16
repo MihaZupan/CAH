@@ -1,6 +1,14 @@
-﻿using CAH.Server.Types;
+﻿/*
+    Copyright (c) Miha Zupan. All rights reserved.
+    This file is a part of the CAH project by Miha Zupan and Juš Mirtič.
+    It is licensed under the Simplified BSD License (BSD 2-clause).
+    For more information visit:
+    https://github.com/MihaZupan/CAH/blob/master/LICENSE
+*/
+using CAH.Server.Types;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
 
 namespace CAH.Server.JsonAgainstHumanity
 {
@@ -61,7 +69,10 @@ namespace CAH.Server.JsonAgainstHumanity
 
         private static string Format(string text)
         {
-            // ToDo: Strip html
+            text = Regex.Replace(text, "<.*?>", " ");
+            text = text.Replace('\r', ' ').Replace('\n', ' ').Replace('\t', ' ');
+            text = text.RemoveDoubleSpaces();
+            text = text.Trim();
             return text;
         }
     }

@@ -5,11 +5,10 @@
     For more information visit:
     https://github.com/MihaZupan/CAH/blob/master/LICENSE
 */
-namespace CAH.Server.Types
+namespace CAH.Server.ServerUpdates
 {
-    class BlackCard
+    interface IServerUpdate
     {
-        public string Text;
-        public int Pick;
+        string Method { get; }
     }
 }

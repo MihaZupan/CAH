@@ -6,7 +6,7 @@
 * Success - available deck names, opened game rooms, player's score (only saved if a password is set)
 * Failure: reason (account exists and has a password / wrong password)
 
-#### ***`lobby/joinGameRoom(gameRoomId)`***
+#### ***`lobby/joinGameRoom(gameRoomId, [password])`***
 * Success: target game room info
 * Failure: reason (closed / wrong password / room full).
 
